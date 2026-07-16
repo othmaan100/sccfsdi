@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sprout } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +27,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-primary text-white p-2 rounded-xl transition-transform duration-300 group-hover:rotate-12 shadow-md">
-              <Sprout size={24} />
+            <div className="bg-white p-1 rounded-xl transition-transform duration-300 group-hover:rotate-6 shadow-md flex items-center justify-center w-12 h-12 overflow-hidden border border-[var(--color-sahel-border)]">
+              <img src="/images/logo.jpeg" alt="SCCFSDI Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <span className="font-display font-bold text-lg text-sahel-dark leading-none block">

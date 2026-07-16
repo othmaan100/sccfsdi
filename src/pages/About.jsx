@@ -1,8 +1,122 @@
-import React from 'react';
-import { Target, Eye, Shield, Users, Landmark, Trees, Heart, Sparkles, Scale, Handshake } from 'lucide-react';
+import React, { useState } from 'react';
+import { Target, Eye, Shield, Users, Landmark, Trees, Heart, Sparkles, Scale, Handshake, AlertCircle } from 'lucide-react';
 import Organogram from '../components/UI/Organogram';
 
 const About = () => {
+  const [activePolicyTab, setActivePolicyTab] = useState('principles');
+
+  const policyValues = [
+    {
+      num: '1',
+      title: 'Human Dignity',
+      desc: 'Every individual in the Sahel region has the right to live with dignity, free from hunger and climate-induced hardship. Programs must prioritize respect for human rights and cultural identities.'
+    },
+    {
+      num: '2',
+      title: 'Equity and Inclusion',
+      desc: 'Development efforts will address the needs of the most vulnerable populations, including women, children, displaced persons, and marginalized communities. Special measures will ensure equitable access to resources and opportunities.'
+    },
+    {
+      num: '3',
+      title: 'Sustainability',
+      desc: 'All interventions must promote environmental, economic, and social sustainability, focusing on long-term resilience rather than short-term relief.'
+    },
+    {
+      num: '4',
+      title: 'Accountability and Transparency',
+      desc: 'The initiative will maintain robust accountability mechanisms to ensure responsible use of resources and transparent decision-making processes. Communities will have the right to monitor and evaluate programs.'
+    },
+    {
+      num: '5',
+      title: 'Collaboration and Participation',
+      desc: 'Local communities, governments, international organizations, and civil society must collaborate. Initiatives will empower local actors to participate in decision-making and implementation.'
+    },
+    {
+      num: '6',
+      title: 'Conflict Sensitivity',
+      desc: 'Recognizing the nexus between climate change and conflict, interventions will aim to reduce tensions over resources, promote peacebuilding, and avoid exacerbating existing disputes.'
+    }
+  ];
+
+  const policyObjectives = [
+    {
+      num: '1',
+      title: 'Mitigation and Adaptation to Climate Change',
+      points: [
+        'Promote the use of climate-resilient agricultural practices and technologies.',
+        'Develop water management systems to address scarcity and variability.',
+        'Support reforestation and land rehabilitation efforts, particularly through local stewardship.'
+      ]
+    },
+    {
+      num: '2',
+      title: 'Food Security and Livelihoods',
+      points: [
+        'Strengthen local food production systems through training, tools, and access to markets.',
+        'Enhance social safety nets to support households during food shortages or climatic shocks.',
+        'Diversify livelihoods to reduce dependency on climate-sensitive sectors.'
+      ]
+    },
+    {
+      num: '3',
+      title: 'Humanitarian Assistance and Crisis Response',
+      points: [
+        'Establish early warning systems for droughts, floods, and other climate-related disasters.',
+        'Ensure timely delivery of humanitarian aid to affected populations.',
+        'Integrate humanitarian response with long-term development goals.'
+      ]
+    },
+    {
+      num: '4',
+      title: 'Capacity Building and Education',
+      points: [
+        'Provide education and training programs on climate change adaptation and sustainable practices.',
+        'Strengthen local governance structures for effective resource management.',
+        'Support youth and women-led initiatives for community resilience.'
+      ]
+    },
+    {
+      num: '5',
+      title: 'Regional Cooperation and Policy Advocacy',
+      points: [
+        'Foster regional partnerships to address transboundary challenges like water management and migration.',
+        'Advocate for global climate financing tailored to the needs of the Sahel.',
+        'Promote knowledge sharing and innovation across borders.'
+      ]
+    }
+  ];
+
+  const implementationMechanisms = [
+    {
+      title: 'Community Engagement',
+      points: [
+        'Engage local leaders, women, and youth in planning and execution.',
+        'Use participatory methods to ensure programs align with local priorities.'
+      ]
+    },
+    {
+      title: 'Monitoring and Evaluation',
+      points: [
+        'Develop robust indicators to measure progress in climate resilience, food security, and social equity.',
+        'Regularly assess the impact of initiatives and adapt based on findings.'
+      ]
+    },
+    {
+      title: 'Funding and Resource Mobilization',
+      points: [
+        'Mobilize resources from international donors, private sector partners, and regional governments.',
+        'Establish a transparent fund allocation system.'
+      ]
+    },
+    {
+      title: 'Partnerships and Advocacy',
+      points: [
+        'Build alliances with international organizations, research institutions, and NGOs.',
+        'Advocate for policies that address systemic causes of vulnerability in the Sahel.'
+      ]
+    }
+  ];
+
   const values = [
     {
       title: 'Ecological Stewardship',
@@ -110,7 +224,7 @@ const About = () => {
               </div>
               <h3 className="font-display font-bold text-2xl">Our Mission</h3>
               <p className="text-white/80 leading-relaxed text-sm sm:text-base">
-                To restore degraded Sahelian ecosystems, enhance food security for smallholder farming families, and build resilient, empowered communities through sustainable land administration, education, and strategic partnerships.
+                To restore degraded Sahelian ecosystems, enhance food security for smallholder farming families, and build resilient, empower communities through sustainable land administration, education, and strategic partnerships.
               </p>
             </div>
           </div>
@@ -185,6 +299,128 @@ const About = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Policy & Humanitarian Framework */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="text-center space-y-4">
+          <span className="text-primary font-semibold text-xs tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">
+            Policy Framework
+          </span>
+          <h2 className="font-display font-bold text-3xl text-sahel-dark">
+            Humanitarian &amp; Policy Guidelines
+          </h2>
+          <p className="text-sm sm:text-base text-sahel-dark/70 max-w-3xl mx-auto leading-relaxed">
+            The Sahel region faces acute challenges exacerbated by climate change, including food insecurity, resource scarcity, and displacement. This policy framework is designed to guide the implementation of initiatives aimed at addressing these challenges while promoting human dignity, equity, and sustainability. It reflects core humanitarian values and principles to ensure that development efforts are inclusive, participatory, and effective.
+          </p>
+        </div>
+
+        {/* Tab Controls */}
+        <div className="flex flex-wrap justify-center gap-2 bg-sahel-light p-1.5 rounded-2xl border border-sahel-border max-w-2xl mx-auto">
+          <button
+            onClick={() => setActivePolicyTab('principles')}
+            className={`px-5 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-smooth cursor-pointer ${
+              activePolicyTab === 'principles'
+                ? 'bg-primary text-white shadow-md'
+                : 'text-sahel-dark/70 hover:text-primary hover:bg-primary/5'
+            }`}
+          >
+            Values &amp; Principles
+          </button>
+          <button
+            onClick={() => setActivePolicyTab('objectives')}
+            className={`px-5 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-smooth cursor-pointer ${
+              activePolicyTab === 'objectives'
+                ? 'bg-primary text-white shadow-md'
+                : 'text-sahel-dark/70 hover:text-primary hover:bg-primary/5'
+            }`}
+          >
+            Policy Objectives
+          </button>
+          <button
+            onClick={() => setActivePolicyTab('implementation')}
+            className={`px-5 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider transition-smooth cursor-pointer ${
+              activePolicyTab === 'implementation'
+                ? 'bg-primary text-white shadow-md'
+                : 'text-sahel-dark/70 hover:text-primary hover:bg-primary/5'
+            }`}
+          >
+            Implementation
+          </button>
+        </div>
+
+        {/* Tab Content */}
+        <div className="mt-8">
+          {activePolicyTab === 'principles' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+              {policyValues.map((val, idx) => (
+                <div key={idx} className="bg-white border border-sahel-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-smooth space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <span className="bg-primary/10 text-primary font-mono font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">
+                      0{val.num}
+                    </span>
+                    <h4 className="font-display font-bold text-base text-sahel-dark">{val.title}</h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-sahel-dark/70 leading-relaxed">{val.desc}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activePolicyTab === 'objectives' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+              {policyObjectives.map((obj, idx) => (
+                <div key={idx} className="bg-white border border-sahel-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-smooth space-y-4">
+                  <div className="flex items-center space-x-3 border-b border-sahel-border pb-3">
+                    <span className="bg-accent/20 text-sahel-dark font-mono font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">
+                      0{obj.num}
+                    </span>
+                    <h4 className="font-display font-bold text-sm sm:text-base text-sahel-dark leading-tight">{obj.title}</h4>
+                  </div>
+                  <ul className="space-y-2.5">
+                    {obj.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="flex items-start text-xs sm:text-sm text-sahel-dark/70 leading-relaxed">
+                        <span className="text-primary mr-2 shrink-0 mt-1">•</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activePolicyTab === 'implementation' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeIn">
+              {implementationMechanisms.map((mech, idx) => (
+                <div key={idx} className="bg-white border border-sahel-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-smooth space-y-4">
+                  <h4 className="font-display font-bold text-base text-sahel-dark border-b border-sahel-border pb-2">
+                    {mech.title}
+                  </h4>
+                  <ul className="space-y-3">
+                    {mech.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="flex items-start text-xs sm:text-sm text-sahel-dark/70 leading-relaxed">
+                        <span className="text-primary mr-2 shrink-0 mt-1">✓</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Commitment Banner */}
+        <div className="bg-primary/5 border border-primary/10 rounded-3xl p-8 sm:p-10 text-center space-y-4 max-w-4xl mx-auto shadow-sm">
+          <div className="bg-primary/10 text-primary w-10 h-10 rounded-xl flex items-center justify-center mx-auto">
+            <AlertCircle size={20} />
+          </div>
+          <h3 className="font-display font-bold text-lg text-sahel-dark">Commitment to Continuous Learning</h3>
+          <p className="text-sm text-sahel-dark/80 max-w-2xl mx-auto leading-relaxed">
+            The Sahel Climate Change &amp; Food Security Development Initiative is committed to learning from successes and failures, adapting to emerging challenges, and ensuring the dignity, safety, and well-being of all people in the Sahel region.
+          </p>
         </div>
       </section>
 

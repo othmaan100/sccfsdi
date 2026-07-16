@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sprout, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +13,9 @@ const Footer = () => {
           
           {/* Brand Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-primary text-white p-2 rounded-xl">
-                <Sprout size={24} />
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="bg-white p-1 rounded-xl transition-transform duration-300 group-hover:rotate-6 shadow-md flex items-center justify-center w-12 h-12 overflow-hidden border border-white/10">
+                <img src="/images/logo.jpeg" alt="SCCFSDI Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="font-display font-bold text-lg leading-none block">

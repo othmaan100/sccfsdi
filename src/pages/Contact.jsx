@@ -38,7 +38,7 @@ const Contact = () => {
                   <Building2 size={24} />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-lg text-sahel-dark">Bauchi Headquarters</h3>
+                  <h3 className="font-display font-bold text-lg text-sahel-dark">Yobe Headquarters</h3>
                   <span className="text-xs text-primary font-semibold tracking-wider uppercase">Central Administration</span>
                 </div>
               </div>
@@ -46,15 +46,15 @@ const Contact = () => {
               <ul className="space-y-4 text-sm text-sahel-dark/80">
                 <li className="flex items-start">
                   <MapPin size={18} className="text-primary mr-3 shrink-0 mt-0.5" />
-                  <span>No. 12 Gombe Road, Bauchi, Bauchi State, Nigeria</span>
+                  <span>No.124 Adamu Jajere Layout, Tudun-Wada, Dogo- Nini Potiskum LGA, Yobe State.</span>
                 </li>
                 <li className="flex items-center">
                   <Phone size={18} className="text-primary mr-3 shrink-0" />
-                  <span>+234 (0) 803 123 4567</span>
+                  <span>+234 (0) 7036803864, 08036860969</span>
                 </li>
                 <li className="flex items-center">
                   <Mail size={18} className="text-primary mr-3 shrink-0" />
-                  <span>hq@sahelrestoration.org</span>
+                  <span>sahelccfsdi@gmail.com</span>
                 </li>
                 <li className="flex items-start">
                   <Clock size={18} className="text-primary mr-3 shrink-0 mt-0.5" />
@@ -82,11 +82,12 @@ const Contact = () => {
                 </li>
                 <li className="flex items-center">
                   <Phone size={18} className="text-accent mr-3 shrink-0" />
-                  <span>+234 (0) 7036803864, 0803 708 4353</span>
+                  <span>+234 (0) 703 680 3864, 0803 686 0969</span>
                 </li>
+
                 <li className="flex items-center">
                   <Mail size={18} className="text-accent mr-3 shrink-0" />
-                  <span>yobe.field@sahelrestoration.org</span>
+                  <span>sahelccfsdi@gmail.com</span>
                 </li>
                 <li className="flex items-start">
                   <Clock size={18} className="text-accent mr-3 shrink-0 mt-0.5" />
