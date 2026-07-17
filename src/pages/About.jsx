@@ -193,7 +193,7 @@ const About = () => {
           </h2>
           <div className="space-y-4 text-sahel-dark/80 text-sm sm:text-base leading-relaxed">
             <p>
-              Founded in 2022, our organization was created to address the intersecting crises of desertification, climate instability, and food insecurity in Northern Nigeria and the wider Sahel belt. With extreme dry seasons and increasing soil degradation, communities have faced critical losses in agricultural outputs and resources.
+              Founded in 2022, by Saleh Haruna Lawan our organization was created to address the intersecting crises of desertification, climate instability, and food insecurity in Northern Nigeria and the wider Sahel belt. With extreme dry seasons and increasing soil degradation, communities have faced critical losses in agricultural outputs and resources.
             </p>
             <p>
               By establishing our anchor field office in Potiskum, Yobe State, we began working closely with regional local government authorities (LGAs) and agricultural unions. We recognized that restoring the environment requires more than planting trees; it requires empowering local populations with climate adaptation skills, securing sustainable water sources, and building farmer support networks.
@@ -421,6 +421,67 @@ const About = () => {
           <p className="text-sm text-sahel-dark/80 max-w-2xl mx-auto leading-relaxed">
             The Sahel Climate Change &amp; Food Security Development Initiative is committed to learning from successes and failures, adapting to emerging challenges, and ensuring the dignity, safety, and well-being of all people in the Sahel region.
           </p>
+        </div>
+      </section>
+
+      {/* Executive Leadership Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="text-center space-y-4">
+          <span className="text-primary font-semibold text-xs tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">
+            Our Leadership
+          </span>
+          <h2 className="font-display font-bold text-3xl text-sahel-dark">
+            Executive Leadership Team
+          </h2>
+          <p className="text-sm text-sahel-dark/70 max-w-xl mx-auto">
+            Meet the visionaries directing our strategic initiatives and supervising day-to-day operations in the field.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Saleh Haruna Lawan */}
+          <div className="bg-white rounded-3xl border border-sahel-border overflow-hidden shadow-md hover:shadow-lg transition-smooth flex flex-col group">
+            <div className="aspect-[4/5] relative overflow-hidden bg-sahel-light">
+              <img 
+                src="/images/Saleh.jpeg" 
+                alt="Saleh Haruna Lawan" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+            </div>
+            <div className="p-8 space-y-3">
+              <div>
+                <h3 className="font-display font-bold text-xl text-sahel-dark">Saleh Haruna Lawan</h3>
+                <span className="text-xs text-primary font-semibold tracking-wider uppercase block mt-1">
+                  Executive Director &amp; Co-Founder
+                </span>
+              </div>
+              <p className="text-sm text-sahel-dark/75 leading-relaxed pt-2 border-t border-sahel-border">
+                Saleh directs the overall strategic vision, policy advocacy, and international partner relations. He spearheads our regional campaigns for ecological restoration and community food resilience across the Sahel belt.
+              </p>
+            </div>
+          </div>
+
+          {/* Nafisa Abubakar Barau */}
+          <div className="bg-white rounded-3xl border border-sahel-border overflow-hidden shadow-md hover:shadow-lg transition-smooth flex flex-col group">
+            <div className="aspect-[4/5] relative overflow-hidden bg-sahel-light">
+              <img 
+                src="/images/Nafisa.jpeg" 
+                alt="Nafisa Abubakar Barau" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+            </div>
+            <div className="p-8 space-y-3">
+              <div>
+                <h3 className="font-display font-bold text-xl text-sahel-dark">Nafisa Abubakar Barau</h3>
+                <span className="text-xs text-primary font-semibold tracking-wider uppercase block mt-1">
+                  Head of Operations
+                </span>
+              </div>
+              <p className="text-sm text-sahel-dark/75 leading-relaxed pt-2 border-t border-sahel-border">
+                Nafisa oversees daily program coordination, logistics, and field team deployment. She manages our network of community tree nurseries, distribution channels, and LGA collaboration frameworks.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

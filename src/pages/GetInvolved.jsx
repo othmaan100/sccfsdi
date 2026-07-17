@@ -20,10 +20,10 @@ const GetInvolved = () => {
   };
 
   const donationTiers = [
-    { amount: 25, label: 'Plant 10 Trees', desc: 'Covers nursery and watering costs for ten indigenous seedlings.' },
-    { amount: 50, label: 'Farmer Toolkit', desc: 'Provides hermetic storage bags and crop support training for one smallholder.' },
-    { amount: 100, label: 'Community Seminar', desc: 'Funds a dry-season water preservation training class for 20 farmers.' },
-    { amount: 250, label: 'Woodlot Setup', desc: 'Helps plant a community shelterbelt row to stabilize boundary soil.' }
+    { amount: 6, label: 'Plant 10 Trees', desc: 'Covers nursery and watering costs for ten indigenous seedlings.' },
+    { amount: 15, label: 'Farmer Toolkit', desc: 'Provides hermetic storage bags and crop support training for one smallholder.' },
+    { amount: 25, label: 'Community Seminar', desc: 'Funds a dry-season water preservation training class for 20 farmers.' },
+    { amount: 30, label: 'Woodlot Setup', desc: 'Helps plant a community shelterbelt row to stabilize boundary soil.' }
   ];
 
   const jobs = [
